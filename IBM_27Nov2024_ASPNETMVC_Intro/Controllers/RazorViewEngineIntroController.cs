@@ -13,5 +13,16 @@ namespace IBM_27Nov2024_ASPNETMVC_Intro.Controllers
         {
             return View();
         }
+
+
+        public ActionResult LayoutContentWithSection()
+        {
+            return View();
+        }
+
+        public ActionResult NestedLayoutContent()
+        {
+            return View();
+        }
     }
 }

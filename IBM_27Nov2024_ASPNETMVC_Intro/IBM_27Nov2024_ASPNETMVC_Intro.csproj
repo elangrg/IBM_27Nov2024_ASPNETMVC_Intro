@@ -152,6 +152,12 @@
     <Content Include="Views\Products\Edit.cshtml" />
     <Content Include="Views\Products\Index.cshtml" />
     <Content Include="Views\RazorViewEngineIntro\RazorSyntax.cshtml" />
+    <Content Include="Views\Shared\_LayoutMain.cshtml" />
+    <Content Include="Views\RazorViewEngineIntro\LayoutContentWithSection.cshtml" />
+    <Content Include="Views\Shared\_LayoutLevel0.cshtml" />
+    <Content Include="Views\Shared\_LayoutLevel1.cshtml" />
+    <Content Include="Views\Shared\_LayoutLevel2.cshtml" />
+    <Content Include="Views\RazorViewEngineIntro\NestedLayoutContent.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
