@@ -1,0 +1,112 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>RazorSyntax</title>
+</head>
+<body>
+
+    
+
+    <div>
+        @{ // Block - Server Side Code
+
+            string _msg = "Welcome to Razor Syntax !!!!";
+            int productID = 100;
+
+
+        }
+
+
+        <h1>  @@Implicit Expression <br /> "@@_msg" yielded : "@_msg"  <br /> if you see "@@" that is because it is escaped using "@@@@" </h1>
+
+
+        <h1> @@Construct  eg: @@ForEach, @@If ...</h1>
+
+
+        <!-- #region Render Code -->
+        @*<h2 style="background-color:lightgoldenrodyellow">
+            Code :  @@for (int ctr = 0; ctr < 10; ctr++)
+            {
+
+            &lt;h1&gt;Value of ctr is @@ctr &lt;/h1&gt;
+            }
+        </h2>*@
+
+        <!-- #endregion -->
+
+
+
+        @for (int ctr = 0; ctr < 10; ctr++)
+        {
+
+            <h5>Value of ctr is @ctr</h5>
+        }
+
+
+        <h3> abc@xyz.com </h3>
+
+
+        <h3> product@productID  =>  product@(productID) = @@(Explicit Expression)    </h3>
+
+
+        @{ 
+
+            T Min<T>(T a, T b)
+            { return a; }
+
+        }
+
+
+        <h3>   @(Min<int>(100, 200)) </h3>
+
+
+        @{ 
+
+            string _alert = "<script> alert('Hacked!!!')</script>";
+
+        }
+
+
+        <h3>   _Alert= @_alert</h3>
+
+
+        @Html.Raw(_alert)
+
+
+        @{ 
+            <p> Auto infered to be client code </p>
+
+            @: " Explicit Client Side : (@@: Single Line Client Side Content )some  Client Side text "
+
+            @: Line 1 
+            @: line 2
+            @: Line 3
+
+
+            <text>
+       " Line 1
+        Line 2
+        Line 2 
+        Eg of Multiple Line Client Side Content"
+        
+        
+                </text>
+
+        }
+
+        "client 
+        Side 
+        text 
+        rendered ......
+                "
+
+    </div>
+</body>
+</html>
